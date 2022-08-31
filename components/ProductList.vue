@@ -9,16 +9,17 @@
           {{item}}
         </v-expansion-panel-header>
         <v-expansion-panel-content>
-          <div v-if="product.groupName === item" v-for="(product, i) in $store.state.goods" :key="i">
-          <Product 
-              :groupId="product.groupId"
-              :groupName="product.groupName"
-              :id="product.id"
-              :name="product.name"
-              :priсeUSD="product.priсeUSD"
-              :quantity="product.quantity"
-          />
-        </div>
+          <div v-for="(product, i) in $store.state.goods" :key="i">
+            <Product
+                v-if="product.groupName === item"
+                :groupId="product.groupId"
+                :groupName="product.groupName"
+                :id="product.id"
+                :name="product.name"
+                :priсeUSD="product.priсeUSD"
+                :quantity="product.quantity"
+            />
+          </div>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </div>
