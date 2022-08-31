@@ -51,13 +51,13 @@ export default {
     },
     computed: {
         priceOld () {
-            return  this.priсeUSD * this.$store.state.currencyUSDold
+            return  (this.priсeUSD * this.$store.state.currencyUSDold).toFixed(2)
         },
         price () {
-            return  this.priсeUSD * this.$store.state.currencyUSD
+            return  (this.priсeUSD * this.$store.state.currencyUSD).toFixed(2)
         },
         priceAdvantage () {
-            return this.priсeUSD * this.$store.state.currencyUSD < this.priсeUSD * this.$store.state.currencyUSDold
+            return (this.priсeUSD * this.$store.state.currencyUSD).toFixed(2) < (this.priсeUSD * this.$store.state.currencyUSDold).toFixed(2)
         }
     }
 }
