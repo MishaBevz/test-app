@@ -2,6 +2,7 @@
 <template>
     <header class="header">
         <v-app-bar
+        v-if="$store.state.categoryNames.length"
         color="deep-purple accent-4"
         dense
         dark
@@ -14,6 +15,10 @@
 
             <Cart/>  
         </v-app-bar>
+
+        <v-skeleton-loader v-else
+            type="table-heading"
+        ></v-skeleton-loader>
     </header>
 </template>
 
@@ -29,6 +34,7 @@ export default {
 </script>
 <style lang="scss">
     .header {
+        height: 48px;
         margin-bottom: 42px;
     }
 </style>
