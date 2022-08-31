@@ -21,17 +21,18 @@
 
 ```bash
 # install dependencies
+# Установка зависимостей
 $ npm install
 
 # serve with hot reload at localhost:3000
+# запуск в режиме разработки
 $ npm run dev
 
 # build for production and launch server
+# Запуск в режиме продакшена
 $ npm run build
 $ npm run start
 
-# generate static project
-$ npm run generate
 ```
 
 
